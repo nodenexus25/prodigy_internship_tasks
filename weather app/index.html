@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <div class="weather-container">
+        <h1><i class="fas fa-cloud-sun"></i> Weather App</h1>
+        <div class="location">
+            <input type="text" id="locationInput" placeholder="Enter city, country">
+            <button onclick="fetchWeather()"><i class="fas fa-search"></i> Get Weather</button>
+        </div>
+        <div class="current-date-time">
+            <p id="currentDate"></p>
+            <p id="currentTime"></p>
+        </div>
+        <div class="weather-info">
+            <!-- Weather data will be displayed here -->
+        </div>
+        
+            <h2><i class="fas fa-calendar-day"></i> Forecast</h2>
+            <div id="forecast"></div>
+            <h2><i class="fas fa-wind"></i> Wind Predictions</h2>
+            <div id="wind"></div>
+            <h2><i class="fas fa-tachometer-alt"></i> Humidity & Visibility</h2>
+            <div id="humidity-visibility"></div>
+            <h2><i class="fas fa-sun"></i> Sunrise & Sunset</h2>
+            <div id="sunrise-sunset"></div>
+            <h2><i class="fas fa-globe"></i> Climate Map</h2>
+            <div id="climate-map">
+                <img id="climate-image" src="https://i.pinimg.com/originals/57/fc/f8/57fcf88e5a4e3d99e4f93c49a11a2740.gif" alt="Climate Map">
+            </div>
+            <h2><i class="fas fa-image"></i> Weather Visualizations</h2>
+            <div id="visualizations">
+                <img id="weather-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8KREjUoEPLyJT3thFxmKKaCQiPWYF2Y8-WQ&s" alt="Weather Visualization">
+            </div>
+        </div>
+    </div>
+
+    <script src="A:\weather app\script.js"></script>
+</body>
+</html>
+
+
