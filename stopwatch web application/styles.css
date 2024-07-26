@@ -1,0 +1,181 @@
+
+/* styles.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.stopwatch {
+    text-align: center;
+    color: #fff;
+}
+
+.outer-ring {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 12px solid rgba(0, 255, 255, 0.6);
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+    margin: 0 auto;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+    overflow: hidden;
+}
+
+.watch-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hand {
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.8), rgba(0, 255, 255, 0.3));
+    transform-origin: 100% 50%;
+    top: 50%;
+    left: 0%;
+    transform: rotate(90deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.hour-hand {
+    height: 8px;
+    background: linear-gradient(90deg, rgba(0, 255, 255, 1), rgba(0, 255, 255, 0.6));
+}
+
+.minute-hand {
+    height: 6px;
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.3));
+}
+
+.second-hand {
+    height: 4px;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 1), rgba(255, 0, 0, 0.6));
+}
+
+.center-dot {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: #00c4cc;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}
+
+.glow {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
+
+.digital-clock {
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #003c3e;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+    letter-spacing: 1px;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    margin: 0 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    background: #00c4cc;
+    color: white;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+}
+
+button:hover {
+    background: #00a8a9;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.laps {
+    margin-top: 20px;
+}
+
+.laps h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #00c4cc;
+}
+
+.laps ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.laps li {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #000000;
+    border-bottom: 1px solid #333;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.laps li button {
+    background: #e74c3c;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.laps li button:hover {
+    background: #ba1f0e;
+}

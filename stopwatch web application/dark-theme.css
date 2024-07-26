@@ -1,0 +1,72 @@
+/* dark-theme.css */
+
+body {
+    background: url('https://example.com/milky-way-background-dark.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+.stopwatch {
+    text-align: center;
+}
+
+.outer-ring {
+    border: 12px solid rgba(0, 255, 255, 0.6);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+}
+
+.watch-face {
+    background: radial-gradient(circle, #111, #333);
+}
+
+.hand {
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.8), rgba(0, 255, 255, 0.3));
+}
+
+.hour-hand {
+    background: linear-gradient(90deg, rgba(0, 255, 255, 1), rgba(0, 255, 255, 0.6));
+}
+
+.minute-hand {
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.3));
+}
+
+.second-hand {
+    background: linear-gradient(90deg, rgba(255, 0, 0, 1), rgba(255, 0, 0, 0.6));
+}
+
+.center-dot {
+    background: #00c4cc;
+}
+
+.glow {
+    border: 2px solid rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+}
+
+.digital-clock {
+    color: #00c4cc;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+}
+
+button {
+    background: #00c4cc;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+}
+
+button:hover {
+    background: #00a8a9;
+}
+
+.laps h2 {
+    color: #00c4cc;
+}
+
+.laps li {
+    color: #fff;
+    border-bottom: 1px solid #333;
+}
+
+.laps li button {
+    background: #e74c3c;
+}
