@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    color: #61dafb;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #61dafb;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin: auto;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #20232a;
+    border: 2px solid #61dafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cell:hover {
+    background-color: #61dafb;
+    transform: scale(1.1);
+}
+
+.cell.x::before {
+    content: 'X';
+    color: #ff6f61;
+    animation: popIn 0.5s ease-in-out;
+}
+
+.cell.o::before {
+    content: 'O';
+    color: #6eff61;
+    animation: popIn 0.5s ease-in-out;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.5em;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.options {
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #61dafb;
+    color: #20232a;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #21a1f1;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
